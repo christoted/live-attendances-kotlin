@@ -10,10 +10,12 @@ class HawkStorage {
         private const val TOKEN_KEY = "token"
         private val hawkStorage = HawkStorage()
 
-        fun instance(context: Context?) : HawkStorage {
+        fun instance(context: Context?): HawkStorage {
             Hawk.init(context).build()
             return hawkStorage
         }
+
+    }
 
         fun setUser(user : User) {
             Hawk.put(USER_KEY, user)
@@ -44,5 +46,4 @@ class HawkStorage {
         fun deleteAll() {
             Hawk.deleteAll()
         }
-    }
 }
