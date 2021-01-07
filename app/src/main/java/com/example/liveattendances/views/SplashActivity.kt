@@ -7,6 +7,7 @@ import android.os.Looper
 import com.example.liveattendances.MainActivity
 import com.example.liveattendances.R
 import com.example.liveattendances.hawkstorage.HawkStorage
+import com.example.liveattendances.views.login.LoginActivity
 import org.jetbrains.anko.startActivity
 
 class SplashActivity : AppCompatActivity() {

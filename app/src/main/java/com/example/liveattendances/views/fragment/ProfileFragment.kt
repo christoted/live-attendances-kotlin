@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.liveattendances.MainActivity
-import com.example.liveattendances.R
 import com.example.liveattendances.databinding.FragmentAttendanceBinding
 import com.example.liveattendances.databinding.FragmentProfileBinding
 import com.example.liveattendances.views.ChangePasswordActivity
-import com.example.liveattendances.views.LoginActivity
+import com.example.liveattendances.views.login.LoginActivity
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
