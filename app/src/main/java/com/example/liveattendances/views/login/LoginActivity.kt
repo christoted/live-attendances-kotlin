@@ -1,11 +1,9 @@
 package com.example.liveattendances.views.login
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
-import android.util.Patterns.EMAIL_ADDRESS
 import com.example.liveattendances.MainActivity
 import com.example.liveattendances.R
 import com.example.liveattendances.databinding.ActivityLoginBinding
@@ -14,7 +12,7 @@ import com.example.liveattendances.hawkstorage.HawkStorage
 import com.example.liveattendances.model.LoginResponse
 import com.example.liveattendances.networking.ApiServices
 import com.example.liveattendances.networking.RetrofitClient
-import com.example.liveattendances.views.ForgotPasswordActivity
+import com.example.liveattendances.views.forgot.ForgotPasswordActivity
 import com.google.gson.Gson
 import okhttp3.ResponseBody
 import org.jetbrains.anko.startActivity
@@ -23,7 +21,6 @@ import retrofit2.Callback
 import retrofit2.Converter
 import retrofit2.Response
 import java.io.IOException
-import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 
