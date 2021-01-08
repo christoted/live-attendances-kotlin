@@ -55,7 +55,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
         val forgotPasswordRequestString = Gson().toJson(forgotPasswordRequest)
 
-        ApiServices.getLiveAttendanceServices().forgotRequest(forgotPasswordRequestString)
+        ApiServices.getLiveAttendanceServices().forgotPasswordRequest(forgotPasswordRequestString)
             .enqueue(object : Callback<ForgotPasswordResponse> {
 
                 override fun onResponse(
