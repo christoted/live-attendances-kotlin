@@ -1,9 +1,11 @@
 package com.example.liveattendances.views.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
+import android.widget.Toast
 import com.example.liveattendances.MainActivity
 import com.example.liveattendances.R
 import com.example.liveattendances.databinding.ActivityLoginBinding
@@ -61,14 +63,20 @@ class LoginActivity : AppCompatActivity() {
                     response: Response<LoginResponse>
                 ) {
                     MyDialog.hideDialog()
+                    Log.e("OYYY", "Masuk gak")
                     if (response.isSuccessful){
                         val user = response.body()?.user
+                        Log.e("OYYY", "NULL YO gak $user")
                         val token = response.body()?.meta?.token
+                        Log.e("OYYY", "NULL YO gak $token")
+                        Log.e("OYYY", "NULL YO gak")
                         if (user != null && token != null){
                             HawkStorage.instance(this@LoginActivity).setUser(user)
                             HawkStorage.instance(this@LoginActivity).setToken(token)
                             goToMain()
+                            Log.e("OYYY", "GAK MLEBU gak")
                         }
+                        Log.e("OYYY", "Masuk gak")
                     }else{
                         val errorConverter: Converter<ResponseBody, LoginResponse> =
                             RetrofitClient
@@ -103,7 +111,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToMain() {
-        startActivity<MainActivity>()
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
         finishAffinity()
     }
 
