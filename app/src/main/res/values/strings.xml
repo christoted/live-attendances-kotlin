@@ -30,5 +30,10 @@
     <string name="wrong_pattern">Wrong Pattern</string>
     <string name="fill_pass">Please fill your password</string>
     <string name="search_your_location">Search your location</string>
+    <string name="alert">Search your location</string>
+    <string name="something_wrong">Something Wrong</string>
+    <string name="not_granted">Something Wrong</string>
+    <string name="required_permission">Something Wrong</string>
+    <string name="please_take_your_photo">Something Wrong</string>
 
 </resources>
