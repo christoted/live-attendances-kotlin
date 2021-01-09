@@ -1,9 +1,6 @@
 package com.example.liveattendances.networking
 
-import com.example.liveattendances.model.AttendanceResponse
-import com.example.liveattendances.model.ForgotPasswordResponse
-import com.example.liveattendances.model.HistoryResponse
-import com.example.liveattendances.model.LoginResponse
+import com.example.liveattendances.model.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -34,9 +31,10 @@ interface LiveAttendanceApiServices {
                              @Query("to") toDate: String
     ): Call<HistoryResponse>
 
-//    @Headers("Accept: application/json", "Content-Type: application/json")
-//    @POST("auth/logout")
-//    fun logoutRequest(@Header("Authorization") token: String): Call<LogoutResponse>
+    @Headers("Accept: application/json", "Content-Type: application/json")
+    @POST("auth/logout")
+    fun logoutRequest(@Header("Authorization") token: String): Call<LogoutResponse>
+
 //
 //    @Headers("Accept: application/json", "Content-Type: application/json")
 //    @POST("auth/password/reset")
