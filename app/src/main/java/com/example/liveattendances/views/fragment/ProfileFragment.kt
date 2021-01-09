@@ -30,6 +30,10 @@ class ProfileFragment : Fragment() {
 
     private var binding: FragmentProfileBinding? = null
 
+    companion object {
+        private val TAG = ProfileFragment::class.java.simpleName
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
